@@ -6,7 +6,8 @@
 # description: Starts and stops the carbon-cache daemon.
 
 # Source function library.
-. /etc/rc.d/init.d/functions
+#. /etc/rc.d/init.d/functions
+. /lib/lsb/init-functions
 
 exec="/opt/graphite/bin/carbon-cache.py"
 pidfile="/opt/graphite/carbon-cache.pid"

@@ -1,5 +1,8 @@
 ---
 
+apache_user: www-data
+apache_service: apache2
+apache_vhost_dest: /etc/apache2/sites-enabled/graphite
 apache_pkgs:
   - apache2-mpm-worker
   - libapache2-mod-wsgi

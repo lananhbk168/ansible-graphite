@@ -1,0 +1,6 @@
+---
+
+apache_user: www-data
+apache_service: apache2
+
+graphite_secret_key: 'SDFkhaoboqqggb1)yR-czZ=JXfZxaQZ-o{s8uAZgC{:R+,*3A0I:KS?a~NJxG'
