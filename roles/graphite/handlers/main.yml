@@ -1,0 +1,4 @@
+---
+
+- name: Reload carbon-cache
+  service: name=carbon-cache state=restarted

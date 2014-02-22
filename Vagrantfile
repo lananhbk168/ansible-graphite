@@ -38,12 +38,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
+  config.vm.provision "shell", inline: "sudo locale-gen en_US.UTF-8"
+
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
     ansible.inventory_path = "hosts"
     ansible.host_key_checking = false
     ansible.extra_vars = { ssh_user: 'vagrant' }
-    ansible.tags = 'debian'
+    #ansible.tags = 'debian'
   end
 
 

@@ -14,10 +14,3 @@
   apt: "name={{ item }} state=present"
   with_items: apache_pkgs
   when: ansible_os_family == 'Debian'
-
-
-- name: Add graphite vhost
-  template: "src=etc/httpd/conf.d/graphite.conf.j2 dest={{ apache_vhost_dest }}
-   owner={{ apache_user }} group={{ apache_user }} mode=0644"
-  notify:
-    - reload apache
